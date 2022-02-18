@@ -19,7 +19,23 @@
     .hero-text p {
         font-size: 15px;
     }
-
+    /*SUBSECTIONS*/
+    .subsection {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .subsection h1 {
+        font-size: 60px;
+        font-weight: 200;
+    }
+    .subsection img {
+        width: 300px;
+        height: auto;
+        margin: 20px auto 0 auto;
+    }
 
 }
     
@@ -42,6 +58,23 @@
         display: inline-block;
         padding: 0 20px;
     }
+    /*SUBSECTIONS*/
+    .subsection {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .subsection h1 {
+        font-size: 60px;
+        font-weight: 200;
+    }
+    .subsection img {
+        width: 300px;
+        height: auto;
+        margin: 20px auto 0 auto;
+    }
     
 }
 
@@ -61,7 +94,6 @@ body {
     height: 786px;
     color: #fff;
 }
-
 li a {
     width: 60px;
     color: #fff;
@@ -70,12 +102,10 @@ li a {
 li a:hover {
     text-decoration: underline;
 }
-
 .hero-text {
     display: inline-block;
     margin: 100px 0 0 100px;  
 }
-
 .hero-text h1 {
     font-weight: 200;
     margin-bottom: 20px;
@@ -104,7 +134,6 @@ li a:hover {
     width: 100%;
     height: 532px;
 }
-
 .hero-publicaciones {
     background: #cccccc url("assets/hero-publicaciones.jpg") center no-repeat;
     background-size: 150%;
@@ -113,7 +142,6 @@ li a:hover {
     width: 100%;
     height: 532px;
 }
-
 .hero-fotografia {
     background: #cccccc url("assets/hero-fotografia.jpg") center no-repeat;
     background-size: 100%;
@@ -122,7 +150,6 @@ li a:hover {
     width: 100%;
     height: 532px;
 }
-
 .hero-blog {
     background: #cccccc url("assets/hero-blog.JPG") center no-repeat;
     background-size: 100%;
@@ -137,23 +164,10 @@ li a:hover {
 
 
 /*SUB-SECCIONES*/
-.subsection {
-    display: flex;
-    text-align: center;
-    width: 100%;
-}
-.subsection h1 {
-    font-size: 60px;
-    font-weight: 200;
-    padding: 0 30px;
-}
-
-.subsection img {
-    margin: 100px 125px;
-}
 
 .textoseccion {
     font-size: 30px;
+    margin: 0 20%;
 }
 
 .cta {
@@ -165,6 +179,7 @@ li a:hover {
     font-weight: 100;
     padding: 10px 25px;
     text-decoration: none;
+    margin: 20px;
 }
 
 .cta:hover {
