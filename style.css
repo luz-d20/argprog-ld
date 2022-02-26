@@ -3,7 +3,7 @@
 
 
 /*MOBILE&TABLET ONLY*/
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
     /*HERO, NAVBAR Y FOOTER*/
     .navbar-mia {
         background-color: #484646;
@@ -24,6 +24,8 @@
     .hero-text p {
         font-size: 15px;
     }
+
+
     /*SUBSECTIONS*/
     .subsection {
         display: flex;
@@ -31,6 +33,9 @@
         justify-items: center;
         text-align: center;
         width: 100%;
+    }
+    .subsection p {
+        font-size: 1em;
     }
     .subsection h1 {
         font-size: 60px;
@@ -42,7 +47,12 @@
         height: auto;
         margin: 20px auto 20px auto;
     }
-
+    .form {
+        max-width: 50%;
+    }
+    .contacto {
+        max-width: 60%;
+    }
 }
     
 /*DESKTOP ONLY*/
@@ -87,6 +97,9 @@
         height: auto;
         margin: 50px 10% 50px 10%;
     }
+    .contacto {
+        max-width: 500px;
+    }
 }
 
 /*GENERAL*/
@@ -94,6 +107,8 @@ body {
     font-family: Montserrat;
     margin: 0;
     padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /*HERO IMAGE - NAVBAR*/
@@ -228,6 +243,7 @@ li a:hover {
     grid-template-columns: repeat(auto-fill, 500px);
     grid-auto-rows: minmax(200px,auto);
     margin: 0 30px;
+    justify-items: center;
     justify-content: center;
 }
 .grid-item img {
@@ -238,6 +254,7 @@ div.grid-item img:hover {
     opacity: 1;
 }
 .grid-item {
+    justify-items: center;
     justify-content: center;
     align-items: center;
 }
@@ -272,30 +289,20 @@ div.grid-item img:hover {
 }
 
 /*SOBRE MI*/
+.about {
+    padding: 0 30px;
+}
 
-.contenidofinal {
+/*OTRAS PUBLICACIONES*/
+.conicet {
     margin: 0 15%;
-    display: grid;
-    grid-template-columns: 70% 30%;
+    margin-bottom: 150px;
 }
-.contenidofinal p {
-    text-align: center;
-    font-size: 20px;
-    line-height: 30px;
+.conicet a:link {
+    color: black;
 }
-.contenidofinal img {
-    grid-column-start: 2;
-    height: 50%;
-    width: auto;
-    align-self: start;
-    margin-top: 0!important;
-}
-/*OTRAS PUBLICACIONES - No es responsive porque es screenshot, no texto*/
-#conicet {
-    min-width: 800px;
-    margin-bottom: 5%;
-    display: flex;
-    justify-content: center;
+.grid-publics {
+    grid-template-columns: repeat(auto-fill, 300px)!important;
 }
 
 /*UTILITARIAS*/
@@ -326,13 +333,7 @@ div.grid-item img:hover {
 }
 
 /*BOOTSTRAP - FORM*/
-.form {
-    max-width: 60%;
-    border: 1px black solid;
-}
-
 .contacto {
-    width: 500px;
     margin: auto;
     padding-bottom: 200px;
 }
