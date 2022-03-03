@@ -1,13 +1,16 @@
 /*IMPORT ICONOS*/
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 
+/*VARIABLES SASS DE COLORES*/
+$fondo-navbar: #484646;
+$texto-claro: #fff;
 
 /*MOBILE&TABLET ONLY*/
 @media only screen and (max-width: 900px) {
     /*HERO, NAVBAR Y FOOTER*/
     .navbar-mia {
-        background-color: #484646;
-        color: #fff;
+        background-color: $fondo-navbar;
+        color: $texto-claro;
         margin: 0 auto;
         text-align: center;
         padding: 5px 0 5px 0;        
@@ -17,15 +20,19 @@
         display: inline-block;
         padding: 0 10px;
     }
-    .hero-text h1 {
-        font-size: 40px;
+    .hero-text {
+        h1 {
+        font-size: 2.5rem;
         width: 200px;
+        }
+        p {
+        font-size: 1rem;
+        }
     }
-    .hero-text p {
-        font-size: 15px;
+    /*BOTONES INDEX*/
+    .cta {
+        margin-bottom: 50px;
     }
-
-
     /*SUBSECTIONS*/
     .subsection {
         display: flex;
@@ -33,19 +40,20 @@
         justify-items: center;
         text-align: center;
         width: 100%;
-    }
-    .subsection p {
-        font-size: 1em;
-    }
-    .subsection h1 {
-        font-size: 60px;
-        font-weight: 200;
-        text-align: center;
-    }
-    .subsection img {
-        width: 300px;
-        height: auto;
-        margin: 20px auto 20px auto;
+        p {
+            font-size: 1rem;
+        }
+        h1,
+        h2 {
+            font-size: 3.75rem;
+            font-weight: 200;
+            text-align: center;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            margin: 20px auto 20px auto;
+        }
     }
     .form {
         max-width: 50%;
@@ -55,6 +63,7 @@
     }
 }
     
+
 /*DESKTOP ONLY*/
 @media only screen and (min-width: 769px) {
     /*HERO, NAVBAR Y FOOTER*/
@@ -62,12 +71,14 @@
         float: right;
         margin-top: 20px;
     }
-    .hero-text h1 {
-        width: 600px;
-        font-size: 80px;
-    }
-    .hero-text p {
-        font-size: 30px;
+    .hero-text {
+        h1 {
+            width: 600px;
+            font-size: 5rem;
+        }
+        p {
+            font-size: 1.875rem;
+        }
     }
     li {
         list-style-type: none;
@@ -80,6 +91,17 @@
         justify-items: center;
         text-align: center;
         width: 100%;
+        h1,
+        h2 {
+            font-size: 3.75rem;
+            font-weight: 200;
+            margin: 25px auto;
+        }
+        img {
+            width: 400px;
+            height: auto;
+            margin: 50px 10% 50px 10%;
+        }
     }
     .sub-home {
         flex-direction: row;
@@ -87,20 +109,11 @@
     .sub-otros {
         flex-direction: column;
     }
-    .subsection h1 {
-        font-size: 60px;
-        font-weight: 200;
-        margin: 25px auto;
-    }
-    .subsection img {
-        width: 400px;
-        height: auto;
-        margin: 50px 10% 50px 10%;
-    }
     .contacto {
         max-width: 500px;
     }
 }
+
 
 /*GENERAL*/
 body {
@@ -111,16 +124,17 @@ body {
     overflow-x: hidden;
 }
 
+
 /*HERO IMAGE - NAVBAR*/
 .navbar-mia {
-    background-color: #484646;
-    color: #fff;
+    background-color: $fondo-navbar;
+    color: $texto-claro;
     margin: 0 auto;
     text-align: center;
     padding: 5px 0 5px 0;
 }
 .hero {
-    background: #cccccc url("assets/header.jpg") no-repeat;
+    background: #cccccc url("../assets/header.jpg") no-repeat;
     display: inline-block;
     background-attachment: fixed;
     background-position: center center;
@@ -128,11 +142,11 @@ body {
     margin-top: 0;
     width: 100%;
     height: 786px;
-    color: #fff;
+    color: $texto-claro;
 }
 li a {
     width: 60px;
-    color: #fff;
+    color: $texto-claro;
     text-decoration: none;
 }
 li a:hover {
@@ -141,19 +155,20 @@ li a:hover {
 .hero-text {
     display: inline-block;
     margin: 100px 0 0 100px;  
+    h1 {
+        font-weight: 200;
+        margin-bottom: 20px;
+    }
+    p {
+        width: 500px;
+    }
+    hr {
+        border-top: 2px solid white;
+        width: 250px;
+        margin: 0;
+    }
 }
-.hero-text h1 {
-    font-weight: 200;
-    margin-bottom: 20px;
-}
-.hero-text p {
-    width: 500px;
-}
-.hero-text hr {
-    border-top: 2px solid white;
-    width: 250px;
-    margin: 0;
-}
+
 
 /*HEADER OTRAS PAGINAS*/
 .header-alternativo {
@@ -161,9 +176,13 @@ li a:hover {
     float: left;
 }
 
+
 /*HERO IMAGE OTRAS PAGINAS*/
-.hero-sobremi {
-    background: #cccccc url("assets/hero-about.jpg") no-repeat;
+
+$heroimgs: "about", "publicaciones", "fotografia", "blog";
+@each $heroimg in $heroimgs {
+	.hero-#{$heroimg} {
+	background: #cccccc url("../assets/hero-#{$heroimg}.jpg") no-repeat;
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
@@ -171,52 +190,18 @@ li a:hover {
     margin-top: 0;
     width: 100%;
     height: 532px;
+	}
 }
-.hero-publicaciones {
-    background: #cccccc url("assets/hero-publicaciones.jpg") center no-repeat;
-    background-attachment: fixed;
-    background-position: bottom center;
-    background-size: cover;
-    display: inline-block;
-    margin-top: 0;
-    width: 100%;
-    height: 532px;
-}
-
-.hero-fotografia {
-    background: #cccccc url("assets/hero-fotografia.jpg") center no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-    display: inline-block;
-    margin-top: 0;
-    width: 100%;
-    height: 532px;
-}
-.hero-blog {
-    background: #cccccc url("assets/hero-blog.JPG") center no-repeat;
-    background-attachment: fixed;
-    background-position: bottom center;
-    background-size: cover;
-    display: inline-block;
-    margin-top: 0;
-    width: 100%;
-    height: 532px;
-}
-
 
 
 /*SUB-SECCIONES*/
-
 .textoseccion {
-    font-size: 30px;
+    font-size: 1.875rem;
     margin: 0 20%;
 }
-
 .publicaciones {
     background-color: #E6E6E6;
 }
-
 
 
 /*FOOTER STICKY*/
@@ -225,15 +210,14 @@ li a:hover {
     padding-top: 15px;
     width: 100%;
     text-align: center;
-    background-color: #484646;
+    background-color: $fondo-navbar;
     position: fixed;
     width: 100%;
     bottom: 0;
     left: 0;
-}
-
-.footer li {
-    padding-bottom: 10px;
+    li {
+        padding-bottom: 10px;
+    }
 }
 
 /*GALERIA HOME*/
@@ -246,72 +230,74 @@ li a:hover {
     justify-items: center;
     justify-content: center;
 }
-.grid-item img {
-    max-width: 100%;
-    opacity: 0.5;
-}
-div.grid-item img:hover {
-    opacity: 1;
-}
 .grid-item {
     justify-items: center;
     justify-content: center;
     align-items: center;
+    img {
+        max-width: 100%;
+        opacity: 0.5;
+    }
+    img:hover {
+        opacity: 1;
+    }
 }
 
-/*BLOG*/
 
+/*BLOG*/
 .post {
     margin: 10px 20% 50px 20%;
     text-align: left;
+    a {
+        text-decoration: none;
+        color: $fondo-navbar;
+    }
 }
 .post-pie {
-    font-size: 12px;
+    font-size: 0.75rem;
 }
-.post a {
-    text-decoration: none;
-    color: #484646;
-}
+
 
 /*CITAS*/
 .quote {
     margin: 0 25%;
+    hr {
+        border-top: 2px solid #707070;
+        width: 100%;
+    }
+    p {
+        text-align: center;
+        font-size: 1.875rem;
+        font-style: italic;
+        line-height: 45px;
+    }
 }
-.quote hr {
-    border-top: 2px solid #707070;
-    width: 100%;
-}
-.quote p {
-    text-align: center;
-    font-size: 30px;
-    font-style: italic;
-    line-height: 45px;
-}
+
 
 /*SOBRE MI*/
 .about {
     padding: 0 30px;
 }
 
+
 /*OTRAS PUBLICACIONES*/
 .conicet {
     margin: 0 15%;
     margin-bottom: 150px;
-}
-.conicet a:link {
-    color: black;
+    a:link {
+        color: black;
+    }
 }
 .grid-publics {
     grid-template-columns: repeat(auto-fill, 300px)!important;
 }
 
-/*UTILITARIAS*/
 
+/*UTILITARIAS*/
 .margen-inferior {
     margin-bottom: 100px;
     text-align: center;
 }
-
 .margen-superior {
     margin-top: 100px;
 }
@@ -336,13 +322,46 @@ div.grid-item img:hover {
 .contacto {
     margin: auto;
     padding-bottom: 200px;
-}
-.contacto input {
-    margin: 15px 0;
+    input {
+        margin: 15px 0;
+    }
 }
 .navbar {
     float:right;
+    a {
+        margin: 0 20px;
+    }
 }
-.navbar a {
-    margin: 0 20px;
+
+
+/*ANIMACIONES - H1 en todas las páginas excepto Index */
+
+.text-focus-in {
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
+ @-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
