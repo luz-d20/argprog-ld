@@ -126,13 +126,6 @@ body {
 
 
 /*HERO IMAGE - NAVBAR*/
-.navbar-mia {
-    background-color: $fondo-navbar;
-    color: $texto-claro;
-    margin: 0 auto;
-    text-align: center;
-    padding: 5px 0 5px 0;
-}
 .hero {
     background: #cccccc url("../assets/header.jpg") no-repeat;
     display: inline-block;
@@ -192,6 +185,9 @@ $heroimgs: "about", "publicaciones", "fotografia", "blog";
     height: 532px;
 	}
 }
+.hero-blog {
+    background-position: bottom;
+}
 
 
 /*SUB-SECCIONES*/
@@ -229,6 +225,12 @@ $heroimgs: "about", "publicaciones", "fotografia", "blog";
     margin: 0 30px;
     justify-items: center;
     justify-content: center;
+
+    &--publics {
+        @extend .grid-container;
+        grid-template-columns: repeat(auto-fill, 300px)!important;
+    }
+    
 }
 .grid-item {
     justify-items: center;
@@ -288,9 +290,6 @@ $heroimgs: "about", "publicaciones", "fotografia", "blog";
         color: black;
     }
 }
-.grid-publics {
-    grid-template-columns: repeat(auto-fill, 300px)!important;
-}
 
 
 /*UTILITARIAS*/
@@ -311,11 +310,6 @@ $heroimgs: "about", "publicaciones", "fotografia", "blog";
 /*BOOTSTRAP - CARDS*/
 .card {
     margin: 10px 0;
-}
-
-/*BOOTSTRAP - CAROUSEL*/
-.carousel-inner img {
-    justify-content: center;
 }
 
 /*BOOTSTRAP - FORM*/
@@ -364,4 +358,3 @@ $heroimgs: "about", "publicaciones", "fotografia", "blog";
       opacity: 1;
     }
   }
-  

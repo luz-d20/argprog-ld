@@ -92,13 +92,6 @@ body {
   overflow-x: hidden; }
 
 /*HERO IMAGE - NAVBAR*/
-.navbar-mia {
-  background-color: #484646;
-  color: #fff;
-  margin: 0 auto;
-  text-align: center;
-  padding: 5px 0 5px 0; }
-
 .hero {
   background: #cccccc url("../assets/header.jpg") no-repeat;
   display: inline-block;
@@ -177,6 +170,9 @@ li a:hover {
   width: 100%;
   height: 532px; }
 
+.hero-blog {
+  background-position: bottom; }
+
 /*SUB-SECCIONES*/
 .textoseccion {
   font-size: 1.875rem;
@@ -200,13 +196,15 @@ li a:hover {
     padding-bottom: 10px; }
 
 /*GALERIA HOME*/
-.grid-container {
+.grid-container, .grid-container--publics {
   display: grid;
   grid-template-columns: repeat(auto-fill, 500px);
   grid-auto-rows: minmax(200px, auto);
   margin: 0 30px;
   justify-items: center;
   justify-content: center; }
+  .grid-container--publics {
+    grid-template-columns: repeat(auto-fill, 300px) !important; }
 
 .grid-item {
   justify-items: center;
@@ -252,9 +250,6 @@ li a:hover {
   .conicet a:link {
     color: black; }
 
-.grid-publics {
-  grid-template-columns: repeat(auto-fill, 300px) !important; }
-
 /*UTILITARIAS*/
 .margen-inferior {
   margin-bottom: 100px;
@@ -271,10 +266,6 @@ li a:hover {
 /*BOOTSTRAP - CARDS*/
 .card {
   margin: 10px 0; }
-
-/*BOOTSTRAP - CAROUSEL*/
-.carousel-inner img {
-  justify-content: center; }
 
 /*BOOTSTRAP - FORM*/
 .contacto {
