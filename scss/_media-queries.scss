@@ -1,0 +1,119 @@
+/*MOBILE&TABLET ONLY*/
+@media only screen and (max-width: 769px) {
+    /*HERO, NAVBAR Y FOOTER*/
+    .navbar-mia {
+        background-color: $fondo-navbar;
+        color: $texto-claro;
+        margin: 0 auto;
+        text-align: center;
+        padding: 5px 0 5px 0;        
+    }
+    li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 0 10px;
+    }
+    .hero-text {
+        h1 {
+        font-size: 2.5rem;
+        width: 200px;
+        }
+        p {
+        font-size: 1rem;
+        }
+    }
+    /*BOTONES INDEX*/
+    .cta {
+        margin-bottom: 50px;
+    }
+    /*SUBSECTIONS*/
+    .subsection {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        text-align: center;
+        width: 100%;
+        p {
+            font-size: 1rem;
+        }
+        h1,
+        h2 {
+            font-size: 3.75rem;
+            font-weight: 200;
+            text-align: center;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            margin: 20px auto 20px auto;
+        }
+    }
+    .form {
+        max-width: 50%;
+    }
+    .contacto {
+        max-width: 60%;
+    }
+    .blog {
+        display: block;
+    }
+    .post {
+            position: relative;
+            margin: -3rem 0 2rem 1rem;
+            padding: 1rem;
+            background: rgba(white, 0.8);
+    }
+}
+    
+
+/*DESKTOP ONLY*/
+@media only screen and (min-width: 769px) {
+    /*HERO, NAVBAR Y FOOTER*/
+    .hero li {
+        float: right;
+        margin-top: 20px;
+    }
+    .hero-text {
+        h1 {
+            width: 600px;
+            font-size: 5rem;
+        }
+        p {
+            font-size: 1.875rem;
+        }
+    }
+    li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 0 20px;
+    }
+    .sub-home {
+        flex-direction: row;
+    }
+    .contacto {
+        max-width: 500px;
+    }
+}
+
+/*SUBSECTIONS*/
+.subsection {
+    display: flex;
+    justify-items: center;
+    text-align: center;
+    width: 100%;
+    h1,
+    h2 {
+        font-size: 3.75rem;
+        font-weight: 200;
+        margin: 25px auto;
+    }
+    img {
+        width: 400px;
+        height: auto;
+        margin: 50px 10% 50px 10%;
+    }
+    &--otros {
+        @extend .subsection;
+        flex-direction: column;
+    }
+}

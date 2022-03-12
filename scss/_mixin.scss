@@ -1,0 +1,7 @@
+/*MIXIN BLOG POSTS*/
+@mixin texto-blog($font-size, $font-color, $font-effect) {
+    font-size: $font-size;
+    color: $font-color;
+    text-decoration: $font-effect;
+    font-family: 'Hubballi', cursive;
+}
