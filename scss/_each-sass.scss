@@ -1,7 +1,7 @@
 $heroimgs: "about", "publicaciones", "fotografia", "blog";
 @each $heroimg in $heroimgs {
 	.hero-#{$heroimg} {
-	background: #cccccc url("./assets/hero-#{$heroimg}.jpg") no-repeat;
+	background: #cccccc url("../assets/hero-#{$heroimg}.jpg") no-repeat;
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;

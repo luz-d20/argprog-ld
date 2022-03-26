@@ -4,6 +4,8 @@
 @import "mixin.scss";
 @import "media-queries.scss";
 @import "each-sass.scss";
+@import "animaciones.scss";
+@import "clases-bootstrap.scss";
 
 /*GENERAL*/
 body {
@@ -13,8 +15,6 @@ body {
     max-width: 100%;
     overflow-x: hidden;
 }
-
-
 /*HERO IMAGE - NAVBAR*/
 .hero {
     background: #cccccc url("../assets/header.jpg") no-repeat;
@@ -51,21 +51,15 @@ li a:hover {
         margin: 0;
     }
 }
-
-
 /*HEADER OTRAS PAGINAS*/
 .header-alternativo {
     width: 100%;
     float: left;
 }
-
-
 /*HERO IMAGE OTRAS PAGINAS*/
 .hero-blog {
     background-position: bottom;
 }
-
-
 /*SUB-SECCIONES*/
 .textoseccion {
     font-size: 1.875rem;
@@ -74,8 +68,6 @@ li a:hover {
 .publicaciones {
     background-color: #E6E6E6;
 }
-
-
 /*FOOTER STICKY*/
 .footer {
     display: inline-block;
@@ -91,9 +83,7 @@ li a:hover {
         padding-bottom: 10px;
     }
 }
-
 /*GALERIA HOME*/
-
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, 500px);
@@ -101,12 +91,10 @@ li a:hover {
     margin: 0 30px;
     justify-items: center;
     justify-content: center;
-
     &--publics {
         @extend .grid-container;
         grid-template-columns: repeat(auto-fill, 300px)!important;
     }
-    
 }
 .grid-item {
     justify-items: center;
@@ -120,8 +108,6 @@ li a:hover {
         opacity: 1;
     }
 }
-
-
 /*CITAS*/
 .quote {
     margin: 0 25%;
@@ -136,14 +122,10 @@ li a:hover {
         line-height: 45px;
     }
 }
-
-
 /*SOBRE MI*/
 .about {
     padding: 0 30px;
 }
-
-
 /*OTRAS PUBLICACIONES*/
 .conicet {
     margin: 0 15%;
@@ -152,8 +134,6 @@ li a:hover {
         color: black;
     }
 }
-
-
 /*UTILITARIAS*/
 .margen-inferior {
     margin-bottom: 100px;
@@ -162,66 +142,6 @@ li a:hover {
 .margen-superior {
     margin-top: 100px;
 }
-
-/*BOOTSTRAP - ICONOS RRSS*/
-.bi {
-    color: white;
-    padding: 10px 30px;
-}
-
-/*BOOTSTRAP - CARDS*/
-.card {
-    margin: 10px 0;
-}
-
-/*BOOTSTRAP - FORM*/
-.contacto {
-    margin: auto;
-    padding-bottom: 200px;
-    input {
-        margin: 15px 0;
-    }
-}
-.navbar {
-    float:right;
-    a {
-        margin: 0 20px;
-    }
-}
-
-
-/*ANIMACIONES - H1 en todas las páginas excepto Index */
-
-.text-focus-in {
-	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-}
- @-webkit-keyframes text-focus-in {
-    0% {
-      -webkit-filter: blur(12px);
-              filter: blur(12px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-filter: blur(0px);
-              filter: blur(0px);
-      opacity: 1;
-    }
-  }
-  @keyframes text-focus-in {
-    0% {
-      -webkit-filter: blur(12px);
-              filter: blur(12px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-filter: blur(0px);
-              filter: blur(0px);
-      opacity: 1;
-    }
-  }
-
-
 /*BLOG*/
 .blog {
     display: grid;
@@ -236,7 +156,6 @@ li a:hover {
         height: auto;
     }
 }
-
 .post {
     text-align: left;
     a {
@@ -249,4 +168,7 @@ li a:hover {
 .post-cuerpo {
         @include texto-blog(1rem, $fondo-navbar, none);
     }
+}
+.blog-nav {
+    background-color: rgba(30, 30, 30, 0.4);
 }
